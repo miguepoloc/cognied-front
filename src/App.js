@@ -1,4 +1,5 @@
-import logo from './logo.svg';
+/* eslint-disable react/style-prop-object */
+// import logo from './logo.svg';
 import './App.css';
 import Home from './components/Home';
 
