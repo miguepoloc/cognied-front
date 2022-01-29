@@ -1,12 +1,17 @@
-/* eslint-disable default-case */
-import React from "react";
-import "../assets/css/Home.css";
+import React, { useState } from "react";
+import "../assets/css/Formulario.css";
 
-const Formulario = ({ style }) => {
+const Formulario = () => {
+    // Declara una nueva variable de estado, que llamaremos "count".
+    const [count, setCount] = useState(0);
+
     return (
-        <>
-            <p>Este es un Formulario</p>
-        </>
+        <div>
+            <p>You clicked {count} times</p>
+            <button onClick={() => setCount(count + 1)}>
+                Click me
+            </button>
+        </div>
     );
 };
 
