@@ -4,10 +4,10 @@ import PropTypes from "prop-types";
 import Logo from "../assets/img/logo.svg";
 import "../assets/css/Home.css";
 
-const Home = ({ style }) => {
+const Home = ({ style , section}) => {
     return (
         <>
-            <section id="Home">
+            <section id={section.id}>
                 <div className="hero">
                     <div id="particles-js" className="burbujas_home">
                         {/*<canvas class="particles-js-canvas-el"></canvas>*/}
@@ -70,14 +70,14 @@ const Home = ({ style }) => {
                                 }
                             })()
                         }
+                        <div className="w wave"></div>
+                        <div className="w wave2"></div>
+                        <div className="w wave3"></div>
+                        <div className="w wave4"></div>
                     </div>
-                    <div className="w wave"></div>
-                    <div className="w wave2"></div>
-                    <div className="w wave3"></div>
-                    <div className="w wave4"></div>
                 </div>
             </section>
-            <section id="section-2">
+            <section id="Section-2">
                 <h1>hola</h1>
             </section>
         </>
