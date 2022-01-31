@@ -8,7 +8,7 @@ function LandingPage() {
  const secciones = {
      "Home": { id: "Casa", txt: "Casa" },
      "Seccion2":{id: "Section-2", txt: "Seccion2"},
-     "Seccion3":{id: "Seccion3", txt: "Seccion3"}};
+     "Seccion3":{id: "Section-3", txt: "Seccion3"}};
 
  return (
      <>
