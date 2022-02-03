@@ -2,7 +2,7 @@ import React from 'react';
 import { Formik, Form, useField } from 'formik';
 import * as Yup from 'yup';
 import "../assets/css/Login.css";
-import Cel from "../assets/img/Cel.svg";
+import Cel from "../assets/img/tortuga.svg";
 import Ola from "../assets/img/wave.png";
 import Logo from "../assets/img/logo9.svg";
 
@@ -21,6 +21,11 @@ const MyTextInput = ({ label, ...props }) => {
 };
 
 const LoginForm = () => {
+    const requestOptions = {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: "Hola"
+    };
     return (
         <>
             <img
@@ -40,22 +45,25 @@ const LoginForm = () => {
                 <div className="login-container">
                     <Formik
                         initialValues={{
-                            documento: '',
-                            // password: '',
+                            id: '',
                         }}
                         validationSchema={Yup.object({
-                            documento: Yup.number()
+                            id: Yup.number()
                                 .required('Documento requerido'),
                         })}
                         onSubmit={(values, { setSubmitting }) => {
                             setTimeout(() => {
-                                console.log(JSON.stringify(values, null, 2));
+                                requestOptions.body = JSON.stringify(values, null, 2);
+                                fetch("http://127.0.0.1:8000/api/datos/", requestOptions)
+                                    .then(response => response.json())
+                                    .then(res => console.log(res));
                                 alert(JSON.stringify(values, null, 2));
                                 setSubmitting(false);
                             }, 400);
                         }}
                     >
-                        <Form>
+                        {/* {({ }) => ( */}
+                        <Form>gi
                             <img
                                 src={Logo}
                                 id="Icono"
@@ -70,36 +78,17 @@ const LoginForm = () => {
                                     <i className="fas fa-user"></i>
                                 </div>
                                 <div>
-                                    {/* <h5>Usuario</h5> */}
                                     <MyTextInput
-                                        name="documento"
+                                        name="id"
                                         type="number"
                                         clase="input"
                                         placeholder="Documento"
                                     />
                                 </div>
                             </div>
-
-                            {/* 
-                            <div className="input-div two">
-                                <div className="i">
-                                    <i className="fas fa-lock"></i>
-                                </div>
-                                <div>
-                                    <h5>Contraseña</h5>
-                                    <MyTextInput
-                                        name="password"
-                                        type="password"
-                                        clase="input"
-                                        placeholder="Contraseña"
-                                    />
-                                </div>
-                            </div> 
-                            <a href="/#">Olvidé la contraseña</a>*/}
-
                             <input className="btn" type="submit" value="Ingresar" />
                         </Form>
-
+                        {/* )} */}
                     </Formik>
 
                 </div>
@@ -108,9 +97,10 @@ const LoginForm = () => {
     );
 }
 
-
 function Login() {
-    return <LoginForm />;
+    return <>
+        <LoginForm />
+    </>;
 }
 
 export default Login;
