@@ -63,7 +63,7 @@ const LoginForm = () => {
                         }}
                     >
                         {/* {({ }) => ( */}
-                        <Form>gi
+                        <Form>
                             <img
                                 src={Logo}
                                 id="Icono"

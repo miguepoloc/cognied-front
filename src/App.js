@@ -1,5 +1,6 @@
+import React from "react";
 import './App.css';
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import LandingPage from './components/LandingPage'
 import Formulario from './components/Formulario';
 import Login from './components/Login';
