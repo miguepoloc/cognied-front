@@ -47,3 +47,13 @@
     background-color: #fc8890;
     border-color: #fc8890;
 }
+
+/*
+correccion para dispositivos moviles
+@media only screen and (max-width: 992px){
+.btn-naranja{
+    width:25%;
+    margin-left:0px!important;
+    text-align:center;
+}
+}*/

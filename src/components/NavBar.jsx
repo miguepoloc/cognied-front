@@ -21,10 +21,10 @@ const NavBar = ({ Secciones, PrimeraSeccion, scroll }) => {
                 <Container fluid>
                     <Navbar.Brand>
                         <Nav.Link
-                            className="nameNav"
+                            className="nameNav font-Geomanist"
                             onClick={() => scroll.scroll(PrimeraSeccion.id)}
                         >
-                            Cognied
+                            Digitalmente
                         </Nav.Link>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
