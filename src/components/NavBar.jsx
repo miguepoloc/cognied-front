@@ -2,13 +2,9 @@ import React, { useEffect} from "react";
 import { Navbar, Container, Nav, Button } from "react-bootstrap";
 import NavBarElement from "./NavBarElement";
 import "../assets/css/NavBar.css";
-import Scroll from "../helpers/helperScroll"
-//import Scroll from "../assets/js/scrollTemp"
-const NavBar = ({ Secciones,PrimeraSeccion }) => 
-{
-    const scroll = new Scroll(Secciones, PrimeraSeccion.id, ["nameNavActive"]);
 
-    //Cuando cargue el componente, ejecuta este hook, así se pondrá activo el element del nav segun corresponda
+//import Scroll from "../assets/js/scrollTemp"
+const NavBar = ({ Secciones, PrimeraSeccion, scroll }) => {
     useEffect(() => {
         scroll.eventScroll();
     });

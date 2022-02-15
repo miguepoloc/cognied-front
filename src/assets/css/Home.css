@@ -17,9 +17,7 @@
 	align-items:center;
 }
 
-.logo{
-	width:85%;
-}
+
 
 .use_home_grid{
   grid-column-start: 2;
@@ -59,11 +57,10 @@
 }
 
 #logo_home{
-  width:50%;
-  fill:white;
-  padding-right:15px;
-  display:inline-block;
-  vertical-align: middle;
+  width:100%;
+  height: calc(60vh + 100px);
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -118,14 +115,14 @@ body {
 	 transform: translateY(-40px);
 	 --initialY: -40px;
 	 --finalY: -70px;
-	animation: movingWave 7s infinite alternate;
+	animation: movingWave 6s cubic-bezier(.55,.5,.45,.5)  infinite alternate;
 }
  body .hero .wave2 {
 	 height: 240px;
-	 transform: translateY(-80px);
+	 transform: translateY(-50px);
 	 --initialY: -80px;
 	 --finalY: -70px;
-	 animation: movingWaveReverse 8s infinite alternate;
+	 animation: movingWave 6s cubic-bezier(.55,.5,.45,.5)  infinite alternate;
 	 background-size: 960px 240px;
 	 opacity: 0.5;
 	 left: -80vw;
@@ -134,10 +131,10 @@ body {
 }
  body .hero .wave3 {
 	 height: 220px;
-	 transform: translateY(-120px);
-	 --initialY: -120px;
+	 transform: translateY(-100px);
+	 --initialY: -100px;
 	 --finalY: -130px;
-	 animation: movingWave 7s infinite alternate;
+	 animation: movingWave 6s cubic-bezier(.55,.5,.45,.5)  infinite alternate;
 	 background-size: 880px 220px;
 	 opacity: 0.33;
 	 left: -120vw;
@@ -176,22 +173,13 @@ body {
     0%{
        transform: translate(20%, var(--initialY));
       }
+
    100%{
          transform:  translate(5%, var(--finalY));
    }
    
 }
 
-@keyframes movingWaveReverse
-{
-    0%{
-       transform: translate(5%, var(--initialY));
-      }
-   100%{
-         transform:  translate(20%, var(--finalY));
-   }
-   
-}
 
 @keyframes opacidad_burbujas{
 	0%{
@@ -203,4 +191,11 @@ body {
 	100%{
 		opacity:1;
 	}
+}
+
+@media only screen and (max-width: 820px)  {
+#logo_home{
+  width:100%;
+  margin-top: 20%;
+}
 }

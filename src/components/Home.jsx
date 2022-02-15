@@ -74,7 +74,7 @@ const Home = ({ style , section}) => {
                             <div className="w wave"></div>
                             <div className="w wave2"></div>
                             <div className="w wave3"></div>
-                            <div className="w wave4"></div>
+                      
                         {/* </div> */}
                     </div>
                 </div>
