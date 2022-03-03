@@ -32,17 +32,17 @@ const LoginForm = () => {
                 src={Ola}
                 id="Ola"
                 alt=""
-                className='wave'
+                className='ola'
             />
-            <div className="container">
-                <div className="img">
+            <div className="containerx">
+                <div className="imgx">
                     <img
                         src={Cel}
                         id="Cel"
                         alt=""
                     />
                 </div>
-                <div className="login-container">
+                <div className="login-containerx">
                     <Formik
                         initialValues={{
                             id: '',
@@ -63,12 +63,12 @@ const LoginForm = () => {
                         }}
                     >
                         {/* {({ }) => ( */}
-                        <Form>
+                        <Form className='formx'>
                             <img
                                 src={Logo}
                                 id="Icono"
                                 alt=""
-                                className='avatar'
+                                className='avatarx'
                             />
 
                             <h2>Bienvenido</h2>
